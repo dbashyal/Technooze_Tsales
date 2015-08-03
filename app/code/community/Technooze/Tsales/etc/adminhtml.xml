@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <sales>
+            <children>
+                <order>
+                    <children>
+                        <tsales module="tsales">
+                            <title>Missing Orders</title>
+                            <sort_order>10</sort_order>
+                            <action>adminhtml/missingorders</action>
+                        </tsales>
+                    </children>
+                </order>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <sales>
+                        <children>
+                            <order>
+                                <children>
+                                    <missingorders>
+                                        <title>Missing Orders</title>
+                                    </missingorders>
+                                </children>
+                            </order>
+                        </children>
+                    </sales>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

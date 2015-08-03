@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Technooze_Tsales Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Technooze
+ * @package    Technooze_Tsales
+ * @copyright  Copyright (c) 2014 dltr.org
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * @category   Technooze
+ * @package    Technooze_Tsales
+ * @author     Technooze <info@technooze.com>
+ */
+-->
+<config>
+    <modules>
+        <Technooze_Tsales>
+            <version>0.0.1</version>
+        </Technooze_Tsales>
+    </modules>
+    <global>
+        <blocks>
+            <tsales>
+                <class>Technooze_Tsales_Block</class>
+            </tsales>
+        </blocks>
+        <helpers>
+            <tsales>
+                <class>Technooze_Tsales_Helper</class>
+            </tsales>
+        </helpers>
+        <models>
+            <tsales>
+                <class>Technooze_Tsales_Model</class>
+                <resourceModel>tsales_resource</resourceModel>
+            </tsales>
+            <tsales_resource>
+                <class>Technooze_Tsales_Model_Resource</class>
+                <entities>
+                    <missingorders>
+                        <table>tsales_missingorders</table>
+                    </missingorders>
+                </entities>
+            </tsales_resource>
+        </models>
+        <resources>
+            <tsales_setup>
+                <setup>
+                    <module>Technooze_Tsales</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </tsales_setup>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Technooze_Tsales after="Mage_Adminhtml">Technooze_Tsales_Adminhtml</Technooze_Tsales>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <tsales>
+                    <file>technooze_tsales.xml</file>
+                </tsales>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

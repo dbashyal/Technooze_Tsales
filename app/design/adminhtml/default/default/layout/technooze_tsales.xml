@@ -1,0 +1,7 @@
+<layout version="0.1.0">
+    <!--<adminhtml_missingorders_grid>
+        <reference name="head">
+            <action method="setTitle"><title>Missing Orders</title></action>
+        </reference>
+    </adminhtml_missingorders_grid>-->
+</layout>
